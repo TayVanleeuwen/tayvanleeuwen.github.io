@@ -39,8 +39,15 @@ h4{
 p{
     margin: 2%;
 }
+
 img.details{
     padding: 0% 20%;
+}
+
+img{
+    border-style: none;
+    max-width: 100%;
+    height: auto;
 }
 
 nav{
