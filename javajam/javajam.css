@@ -118,7 +118,7 @@ nav a:hover{
 }
 
 /* images and Classes  */
-#details{
+.details{
     padding: 0% 20%;
     overflow: auto;
 }
