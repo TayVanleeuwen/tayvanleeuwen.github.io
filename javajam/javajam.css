@@ -1,26 +1,33 @@
 *{
     box-sizing: border-box;
 }
-
+                                       /* -- small display -- */
 body {
-    background-color: #FCEBB6; 
-    background-image: url(images/fadedroad50.jpg);
-    background-repeat: no-repeat;
-    background-size: auto;
-    color: #221811; 
+    margin: 0%;
+    color: #D2B48C; 
     font-family: tahoma, arial, sans-serif; 
 }
-
+#wrapper {
+    background-color: #231814;
+    padding: 0;
+    margin-right: auto;
+    margin-left: auto;
+}
 header{
     color: #231814;
     background-color: #d2b48c;
-    background-image: url(images/coffeelogo.jpg);
+    background-image: url(images/cup.jpg);
     background-repeat: no-repeat;
     padding-top: 5px;
     padding-bottom: 5px;
-    padding-left: 240px;
+    padding-left: 105px;
+    height: 128px;
 }
-/* header links */
+h1{
+    font-size: 2em;
+    font-family: 'Lobster', cursive, sans-serif;
+}
+                         /* header links */
 header a{
     text-decoration: none;
 }
@@ -33,57 +40,24 @@ header a:visited{
 Header a:hover{
     color: #FEF6C2
 }
-main{
-    padding: 0em 0em;
-    margin-left: 200px;
-    background-color: #FEF6C2;
-    overflow: auto;
-
-}
-h1{
-    font-size: 3em;
-    font-family: 'Lobster', cursive, sans-serif;
-
-}
-
-h2{
-    color: #8c3826;
-    margin: 2%;
-    text-transform: uppercase;
-    border-bottom: 0;
-    padding-bottom: 0;
-    list-style-type: none;
-}
-h3{
-    color: #8c3826;
-    /* margin: 2%; */
-}
-h4{
-    background-color: #d2b48c;
-    font-size: 1.2em;
-}
-    main h2, h3, h4, p, div, ul, dl {
-        padding-left: 3em;
-        padding-right: 2em;
-}
-
-
-/* navigation */
+                   /*   -- navigation -- */
 nav{
     font-size: 1.5em;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    float: left;
-    width: 200px;
     text-align: center;
-    font-weight: bold;
 }
 nav ul{
-    display: block;
-    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    font-size: 1.25em;
 }
-
-/* nav Links */
+nav li{
+    padding: .5em 1em;
+    width: 100%;
+    border-bottom: 1px solid;
+}
+                    /* nav Links */
 nav a {
     text-decoration: none;
 }
@@ -97,47 +71,68 @@ nav a:hover{
     Color: #CC9933;
 }
 
+main{
+    display: block;
+    padding: 0 0 2em 0;
+    background-color: #FEF6C2;
+}
+h1 {
+	font-size: 2em;
+	font-family: 'Bayon', sans-serif;
+}
+h2 {
+	color: #8C3826;
+}
+h3,
+dt {
+	color: #8C3826;
+}
+
+h4 {
+	background-color: #D2B48C;
+	font-size: 1.2em;
+	padding-left: .5em;
+	padding-bottom: 0;
+	text-transform: uppercase;
+	border-bottom: 1px solid #221811;
+	clear: left;
+}
+h2, h3, h4, p, div, dl, ul{
+    padding-left: 1em;
+    padding-right: 1em;
+}
+main ul{
+    padding-left: 2em;
+}
+
 /* images and Classes  */
 .details{
     padding: 0% 20%;
     overflow: auto;
 }
-
 img{
     border-style: none;
     max-width: 100%;
     height: auto;
 }
-
-
-
 #homehero {
 	height: 300px;
-	background-image: url(images/hero.jpg);
+	background-image: url(images/road.jpg);
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 }
 
 #heromugs{
     height: 300px;
-    background-image: url(images/heromugs.jpg);
+    background-image: url(images/threemugs.jpg);
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
 #heroguitar{
     height: 300px;
-    background-image: url(images/heroguitar.jpg);
+    background-image: url(images/guitar.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
-}
-.floatleft{
-    float: left;
-    padding-bottom: 2em;
-    padding-right: 2em;
-}
-.onethird{
-    float: left;
-    width: 33%;
 }
 footer{
     background-color: #d2b48c;
@@ -145,13 +140,89 @@ footer{
     font-style: italic;
     text-align: center;
 }
+#mobile {
+    display: inline;
+}
+#desktop {
+    display: none;
+}
 
-#wrapper {
-    min-width: 900px;
-    max-width: 1280px;
-    box-shadow: 10px 10px 4px #8c3826;
-    background-color: #231814;
-    padding: 0;
-    margin-right: auto;
-    margin-left: auto;
+                                  /* -------- medium display ------------ */
+@media (min-width: 600px){
+    header {
+        text-align: center;
+        padding-left: 0;
+    }
+    h1 {
+        font-size: 3em;
+    }
+    nav ul {
+        flex-flow: row nowrap;
+        justify-content: space-around;
+    }
+    nav li {
+        border-bottom: none;
+    }
+    /* ----- images ------ */
+    #homehero {
+        height: 50vh;
+        background-image: url(images/hero.jpg);
+    }
+    #heromugs {
+        background-image: url(images/heromugs.jpg);
+    }
+    #heroguitar {
+        background-image: url(images/heroguitar.jpg);
+    }
+    #flow {
+        display: flex;
+        flex-direction: row;
+    }
+    #mobile {
+        display: none;
+    }
+    #desktop {
+        display: inline;
+    }
+    .details {
+        display: flex;
+        flex-direction: row;
+    }
+    h4 {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
+                     /* ----------- large display ------------ */
+@media (min-width: 1024px) {
+    @supports (display: grid) {
+        header {
+            grid-area: header;
+        }
+        nav {
+            grid-area: nav;
+        }
+        main {
+            grid-area: main;
+        }
+        footer {
+            grid-area: footer;
+        }
+
+        #wrapper {
+            display: grid;
+            grid-template:
+                "header header"
+                "nav main"
+                "footer footer"
+                / 200px;
+        }
+        nav ul {
+            flex-direction: column;
+        }
+        header {
+            background-image: url(images/coffeelogo.jpg)
+        }
+    }
 }
