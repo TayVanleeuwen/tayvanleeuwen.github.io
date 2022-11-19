@@ -48,20 +48,24 @@ nav{
     text-align: center;
 }
 nav ul{
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
     padding: 0;
     margin: 0;
     font-size: 1.25em;
+    list-style-type: none;
 }
 nav li{
-    padding: .5em 1em;
-    width: 100%;
-    border-bottom: 1px solid;
+    /* padding: .5em 1em;
+    width: 100%; */
+    border-bottom: 1px solid #FEF6C2;
+    padding:0%;
 }
                     /* nav Links */
 nav a {
-    text-decoration: none;
+    text-decoration: column;
+    display: Flex;
+    padding: .5em 1em;
 }
 nav a:link{
     color: #FEF6C2;
@@ -70,7 +74,7 @@ nav a:visited{
     color: #D2B48C;
 }
 nav a:hover{
-    Color: #CC9933;
+    Color: #5d5c5a;
 }
 
 main{
@@ -154,6 +158,12 @@ img{
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
+#herocouch {
+    height: 300px;
+    background-image: url(images/herocouch.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
 #mobile {
     display: inline;
 }
@@ -178,7 +188,21 @@ footer{
     font-style: italic;
     text-align: center;
 }
-
+.item {
+    background-color: #FAF9F7;
+    margin: 1em;
+    padding: 1em;
+    overflow: auto;
+}
+.item img {
+    float: right;
+}
+.current {
+    background-color: #CC9933;
+    border-radius: 2em;
+    text-transform: capitalize;
+    text-decoration: double;
+}
 
                                   /* -------- medium display ------------ */
 @media (min-width: 600px){
